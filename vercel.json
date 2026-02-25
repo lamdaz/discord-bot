@@ -41,10 +41,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "DISCORD_BOT_TOKEN": "@discord-bot-token",
-    "DISCORD_CLIENT_ID": "@discord-client-id",
-    "DISCORD_PUBLIC_KEY": "@discord-public-key"
-  }
+  ]
 }
