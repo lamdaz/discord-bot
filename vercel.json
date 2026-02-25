@@ -13,25 +13,16 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
     },
     {
-      "src": "/([^/]+\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|json))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
-  "env": {
-    "DISCORD_BOT_TOKEN": "@discord-bot-token",
-    "DISCORD_CLIENT_ID": "@discord-client-id",
-    "DISCORD_PUBLIC_KEY": "@discord-public-key"
-  },
   "headers": [
     {
       "source": "/api/(.*)",
@@ -50,5 +41,10 @@
         }
       ]
     }
-  ]
+  ],
+  "env": {
+    "DISCORD_BOT_TOKEN": "@discord-bot-token",
+    "DISCORD_CLIENT_ID": "@discord-client-id",
+    "DISCORD_PUBLIC_KEY": "@discord-public-key"
+  }
 }
